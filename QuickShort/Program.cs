@@ -37,5 +37,51 @@ namespace QuickShort
                 arr[i] = Int32.Parse(s1);
             }
         }
+        //swaps the element at index x with the element at index y
+
+        void swap(int x, int y)
+        {
+            int temp;
+            temp = arr[x];
+            arr[x] = arr[y];
+            arr[y] = temp;
+        }
+        public void q_sort(int low, int high)
+        {
+            int pivot, i, j;
+            if (low > high)
+                return;
+
+            //Partition the list into two parts:
+            // one containing elements less that or equal to pivot
+            //Outher containning elements greather than pivot
+
+            i = low + 1;
+            j = high;
+
+            pivot = arr[low];
+
+            while (i <= j)
+            {
+                //search for an element greater than pivot
+                  while ((arr[i] <= pivot) && (i <= high))
+                {
+                    i++;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+                if (i < j) //if the greater element is on the left of the element
+                {
+                    //swap the element at index i whit the element at index j
+                    swap(i, j);
+
+                }
+            }
+
+        }
+
+
     }
+    
 }
