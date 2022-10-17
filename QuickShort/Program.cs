@@ -104,6 +104,25 @@ namespace QuickShort
 
         }
 
+        void display()
+        {
+            Console.WriteLine("\n--------------------");
+            Console.WriteLine(" Sorted array Elements");
+            Console.WriteLine("----------------------");
+
+            for (int j = 0; j < n; j++)
+            {
+                Console.WriteLine(arr[j]);
+            }
+            Console.WriteLine("\nNumber Of Comparisons: " + cmp_count);
+            Console.WriteLine("\nNumber of data movemenet: " + mov_count);
+        }
+
+        int getSize()
+        {
+            return (n);
+        }
+
 
     }
     
